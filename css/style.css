@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Roboto:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'EB Garamond', serif;
+}
+body {
+   /* display: flex;
+    justify-content: center;
+    align-items: center;*/
+    min-height: 100vh;
+    background: #181818;
+}
+
+.navbar {
+    height: 50px;
+    background-color: #242321;
+    border-bottom: 1px solid #706043;
+}
+.navbar a {
+    color:#FFF;
+    text-decoration: none;
+}
+.navbar a:hover {
+    text-decoration: underline;
+}
+.fanscountdown {
+    font-family: 'Roboto', sans-serif;
+}
+.hotd {
+    /*display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;*/
+    margin-bottom: 60px; 
+}
+
+h2 {
+    color: #FFF;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+    font-size: 1.5em;
+}
+h3 {
+    color: #FFF;
+    margin: 5px 0;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+    font-size: 0.9em;
+}
+/*
+#clock #time {
+    display: flex;
+    justify-content: center;
+}
+*/
+#clock #time div {
+    margin: 0 5px;
+    -webkit-box-reflect: below 1px linear-gradient(transparent,#0004);
+}
+#clock #time div span {
+    display: block;
+    width: 100px;
+    height: 80px;
+    background: #DBD7B4;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    z-index: 10;
+    box-shadow: 0 0 0 1px rgba(0,0,0,.2);   
+}
+.num {
+    color: #706043;
+}
+.seconds {
+    color: #FFF;
+}
+#clock #time div span:nth-child(2) {
+    height: 30px;
+    font-size: 0.7em;
+    letter-spacing: 0.2em;
+    font-weight: 500;
+    z-index: 9;
+    box-shadow: none;
+    background: #A99570;
+    text-transform: uppercase;
+}
+#clock #time div:last-child span {
+    background: #880808;
+}
+#clock #time div:last-child span:nth-child(2) {
+    background: #610505;
+}
+.info {
+    /*width: 60%;*/
+    margin-top: 120px;
+    color: #ccc;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 1em;
+}
+.info p::first-letter {
+    float: none;
+    font-size: 180%;
+    font-weight: 700;
+    color:#610505;
+    vertical-align: sub;
+    background-color: #A99570;
+    /*background-color:#880808;*/
+    padding: 0 2px 0 5px;
+}
+.month {
+    font-weight: bold;
+}
+
+.lang-container {
+    /*background-color: #333;*/
+    padding: 10px;
+}
+.lang-container a {
+    text-transform: uppercase;
+    color: #ccc;
+    text-decoration: none;
+    padding: 0 15px;
+    /*background: #555656;*/
+    font-size: 1em;
+}
+.flag {
+    opacity: 0.5;
+}
+.flag:hover {
+    opacity: 1;
+}
+.active {
+    opacity: 1;
+}
+/*.lang-container a:hover {
+    background-color: #610505;
+    color: #fff;
+    font-weight: bold;
+}*/
+
+.footer {
+    height: 80px;
+    background-color: #242321;
+    color: #666;
+    font-size: 1em;
+}
+/*.main {
+    border: 1px solid #000;
+}
+.img {
+    border: 1px solid #000;    
+}*/
+
+
+@media (min-width: 768px) {
+    .galeria {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 300px);
+      grid-template-areas: "king  king  princess randa" "daemon rhaenyra princess queen";
+      gap: 5px 10px;
+    }
+    .king  {
+      grid-area: king;
+    }
+    .princess {
+      grid-area: princess;
+    }
+    .randa {
+      grid-area: randa;
+    }
+    .daemon {
+      grid-area: daemon;
+    }
+    .rhaenyra {
+      grid-area: rhaenyra;
+    }
+    .queen {
+      grid-area: queen;
+    }
+    .galeria img {
+      -o-object-fit: cover;
+         object-fit: cover;
+      width: 100%;
+      height: 100%;
+      filter: grayscale(1);
+    }
+    .galeria img:hover {
+      filter: none;
+    }
+
+  }
